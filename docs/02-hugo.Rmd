@@ -233,7 +233,7 @@ The `config.toml` of the theme `hugo-lithium` contains the following options:
 ```js
 baseurl = "/"
 relativeurls = false
-languageCode = "en-us"
+locale = "en-us"
 title = "A Hugo website"
 theme = "hugo-lithium"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown", "_files$", "_cache$"]
@@ -509,7 +509,7 @@ To understand `layouts/`, you must know some basics about HTML (see Section \@re
 
         ```html
         <!DOCTYPE html>
-        <html lang="{{ .Site.LanguageCode }}">
+        <html lang="{{ .Site.Language.Locale }}">
           <head>
             <meta charset="utf-8">
             <title>{{ .Title }} | {{ .Site.Title }}</title>
