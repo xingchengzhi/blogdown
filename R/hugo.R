@@ -5,7 +5,7 @@
 #' @describeIn hugo_cmd Run an arbitrary Hugo command.
 hugo_cmd = function(...) {
   on.exit(clean_hugo_cache(), add = TRUE)
-  xfun::system3(find_hugo(), ...)
+  system3(find_hugo(), ...)
 }
 
 #' @export
@@ -24,7 +24,7 @@ hugo_version = local({
 })
 
 .hugo_version = function(cmd) {
-  x = xfun::system3(cmd, 'version', stdout = TRUE)
+  x = system3(cmd, 'version', stdout = TRUE)
   r = '^.* v([0-9.]{2,}).*$'
   if (!isTRUE(grepl(r, x))) stop(paste(
     c("Cannot extract the version number from '", cmd, "':\n", x), collapse = '\n'
@@ -66,7 +66,7 @@ hugo_build = function(
 
   hugo_cmd(c(
     if (local) c('-D', '-F'), na2null(args),
-    '-d', shQuote(publish_dir(config)), theme_flag(config)
+    '-d', publish_dir(config), theme_flag(config)
   ))
 }
 
@@ -202,8 +202,7 @@ new_site = function(
   }
   if (is.logical(format)) format = if (format) 'yaml' else 'toml'
   if (hugo_cmd(
-    c('new', 'site', shQuote(path.expand(dir)), if (force) '--force'),
-    stdout = FALSE
+    c('new', 'site', path.expand(dir), if (force) '--force'), stdout = FALSE
   ) != 0) return(invisible())
 
   owd = setwd(dir); opt = opts$get(); opts$restore()
@@ -545,8 +544,7 @@ new_content = function(path, kind = '', open = interactive()) {
   }
   files = list_mds()
   file2 = hugo_cmd(
-    c('new', shQuote(path2), if (kind != '') c('-k', kind), theme_flag()),
-    stdout = TRUE
+    c('new', path2, if (kind != '') c('-k', kind), theme_flag()), stdout = TRUE
   )
   if (length(i <- grep(r <- '^Content (dir )?"?|"? created$', file2)) == 1) {
     file2 = gsub(r, '', file2[i])

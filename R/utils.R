@@ -901,6 +901,15 @@ sort2 = function(x, ...) {
 
 system2_quiet = function(...) system2(..., stdout = FALSE, stderr = FALSE)
 
+# quote args and encode character output as UTF-8 if possible
+system3 = function(command, args = character(), ...) {
+  res = system2(command, shQuote(args), ...)
+  if (is.character(res)) {
+    if (all(validUTF8(res))) Encoding(res) = 'UTF-8'
+  }
+  if (is.integer(res) && res == 0) invisible(res) else res
+}
+
 # replace random HTML widgets IDs with incremental numbers
 clean_widget_html = function(x) {
   r = '(?<=id="htmlwidget-)[a-z0-9]{10,}(?=")'

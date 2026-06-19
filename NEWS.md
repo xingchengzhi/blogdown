@@ -1,5 +1,6 @@
 # CHANGES IN blogdown VERSION 1.24
 
+- Fixed a breaking change introduced by `system3()` in the latest version of **xfun** (thanks, @remlapmot, yihui/xfun#121).
 
 # CHANGES IN blogdown VERSION 1.23
 
