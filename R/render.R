@@ -7,7 +7,7 @@
 #' web publishing service like Netlify, you do not need to build the site
 #' locally, but can build it on the cloud. See Section 1.7 of the \pkg{blogdown}
 #' book for more information:
-#' \url{https://bookdown.org/yihui/blogdown/workflow.html}.
+#' \url{https://pkg.yihui.org/blogdown/workflow.html}.
 #'
 #' For R Markdown posts, there are a few possible rendering methods: \code{html}
 #' (the default), \code{markdown}, and \code{custom}. The method can be set in

@@ -16,11 +16,11 @@ The goal of the blogdown package is to provide a powerful and customizable websi
 
 By default, blogdown uses [Hugo](https://gohugo.io), a popular open-source static website generator, which provides a fast and flexible way to build your site content to be shared online. Other website generators like Jekyll and Hexo are also supported.
 
-A useful feature of blogdown sites, compared to other R Markdown-based [websites](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html), is that you may organize your website content (including R Markdown files) within subdirectories. This makes blogdown a good solution not just for blogging or sites about R &mdash; it can also be used to create general-purpose websites to communicate about data science, statistics, data visualization, programming, or education.
+A useful feature of blogdown sites, compared to other R Markdown-based [websites](https://pkg.yihui.org/rmarkdown-book/rmarkdown-site.html), is that you may organize your website content (including R Markdown files) within subdirectories. This makes blogdown a good solution not just for blogging or sites about R &mdash; it can also be used to create general-purpose websites to communicate about data science, statistics, data visualization, programming, or education.
 
 ## Book
 
-<a href="https://bookdown.org/yihui/blogdown/"><img class="book" src="https://bookdown.org/yihui/blogdown/images/cover.png" alt = "blogdown: Creating Websites with R Markdown" height="400"></a>
+<a href="https://pkg.yihui.org/blogdown/"><img class="book" src="https://pkg.yihui.org/blogdown/images/cover.png" alt = "blogdown: Creating Websites with R Markdown" height="400"></a>
 
 ## Installation
 
@@ -52,7 +52,7 @@ You may not be satisfied with the default site created from `new_site()`. There 
 
 There are two main places to get help:
 
-1. The [RStudio community](https://community.rstudio.com/tags/c/R-Markdown/10/blogdown) is a friendly place to ask any questions about **blogdown**. Be sure to use the `blogdown` tag.
+1. The [RStudio community](https://forum.posit.co/tags/c/R-Markdown/10/blogdown) is a friendly place to ask any questions about **blogdown**. Be sure to use the `blogdown` tag.
 
 1. [Stack Overflow](https://stackoverflow.com/questions/tagged/blogdown) is a great source of answers to common **blogdown** questions. Use the tags [`[r][blogdown]`](https://stackoverflow.com/questions/tagged/blogdown+r) if you ask a question.
 

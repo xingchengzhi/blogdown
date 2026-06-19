@@ -47,6 +47,6 @@ argument \code{template} does not support the value \code{"default"}.
 }
 \references{
 See Chapter 2 of the \pkg{bookdown} book for the Markdown syntax:
-\url{https://bookdown.org/yihui/bookdown}. See the \pkg{blogdown} book for full
-details: \url{https://bookdown.org/yihui/blogdown}.
+\url{https://pkg.yihui.org/bookdown}. See the \pkg{blogdown} book for full
+details: \url{https://pkg.yihui.org/blogdown}.
 }

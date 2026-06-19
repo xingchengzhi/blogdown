@@ -25,8 +25,8 @@
 #'   The argument `highlight` does not support the value `"textmate"`, and the
 #'   argument `template` does not support the value `"default"`.
 #' @references See Chapter 2 of the \pkg{bookdown} book for the Markdown syntax:
-#'   <https://bookdown.org/yihui/bookdown>. See the \pkg{blogdown} book for full
-#'   details: <https://bookdown.org/yihui/blogdown>.
+#'   <https://pkg.yihui.org/bookdown>. See the \pkg{blogdown} book for full
+#'   details: <https://pkg.yihui.org/blogdown>.
 #' @export
 #' @md
 html_page = function(

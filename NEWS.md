@@ -16,7 +16,7 @@
 
 # CHANGES IN blogdown VERSION 1.21
 
-- Use the `--renderToMemory` flag by default for Hugo >= 0.123.0 when starting `hugo server` (thanks, @drmowinckels, #772). If you do not wish to use this flag by default, please see https://bookdown.org/yihui/blogdown/livereload.html on how to configure your own default flags for `hugo server`.
+- Use the `--renderToMemory` flag by default for Hugo >= 0.123.0 when starting `hugo server` (thanks, @drmowinckels, #772). If you do not wish to use this flag by default, please see https://pkg.yihui.org/blogdown/livereload.html on how to configure your own default flags for `hugo server`.
 
 - Throw a clearer error when using the RStudio addin "Update Metadata" in the visual editor (thanks, @setgree, #769).
 
@@ -114,7 +114,7 @@
 
 ## NEW FEATURES
 
-- The **bookdown** config file `_bookdown.yml` under the site root directory is recognized now. For example, you can [customize the figure label in `_bookdown.yml`](https://bookdown.org/yihui/bookdown/internationalization.html) (thanks, @luofeicq, rbind/yihui#167).
+- The **bookdown** config file `_bookdown.yml` under the site root directory is recognized now. For example, you can [customize the figure label in `_bookdown.yml`](https://pkg.yihui.org/bookdown/internationalization.html) (thanks, @luofeicq, rbind/yihui#167).
 
 - The internal function `scan_yaml()` uses cache in the current R session now. Other functions (e.g., `find_yaml()`, `count_yaml()`, and the "New Post" addin in RStudio) based on this function should be much faster when there are a lot of files to scan for more than once.
 
@@ -320,7 +320,7 @@
 
 - Added a function `remove_hugo()` to remove Hugo (thanks, @cderv, #504).
 
-- The file format `.Rmarkdown` supports HTML widgets and citations now, just like the `.Rmd` format. If you are not familiar with the `.Rmarkdown` format, you may see https://bookdown.org/yihui/blogdown/output-format.html.
+- The file format `.Rmarkdown` supports HTML widgets and citations now, just like the `.Rmd` format. If you are not familiar with the `.Rmarkdown` format, you may see https://pkg.yihui.org/blogdown/output-format.html.
 
 - Added a function `config_netlify()` to help users create the config file `netlify.toml` for Netlify. It sets the `build` commands properly for different deploy contexts, and writes the local Hugo version to the config file, so make sure Netlify uses the same version of Hugo as your local environment. See the help page `?blogdown::config_netlify` for details.
 
@@ -332,7 +332,7 @@
 
 - Exported the function `filter_newfile()`, which returns paths of source files that have not been knitted (i.e., their output files do not exist).
 
-- The `build_rmd` argument of `build_site()` can take a function as its value now (thanks, [Tyler Smith](https://twitter.com/sedgeboy/status/1308511453129908225)). The function is expected to take a vector of paths of all R Markdown files under the `content/` directory, and returns a vector of paths of R Markdown files to be built. This argument can also take one of the aliases `"timestamp"`, which is equivalent to `blogdown::filter_timestamp`, `newfile` (equivalent to `blogdown::filter_newfile`), and `"md5sum"` (equivalent to `blogdown::filter_md5sum`). For example, `blogdown::build_site(build_rmd = "timestamp")` means to build all R Markdown files if they are older than their output files (by comparing modification times).
+- The `build_rmd` argument of `build_site()` can take a function as its value now (thanks, Tyler Smith). The function is expected to take a vector of paths of all R Markdown files under the `content/` directory, and returns a vector of paths of R Markdown files to be built. This argument can also take one of the aliases `"timestamp"`, which is equivalent to `blogdown::filter_timestamp`, `newfile` (equivalent to `blogdown::filter_newfile`), and `"md5sum"` (equivalent to `blogdown::filter_md5sum`). For example, `blogdown::build_site(build_rmd = "timestamp")` means to build all R Markdown files if they are older than their output files (by comparing modification times).
 
 - When opening a **blogdown** website project in RStudio, you can specify a number of files to be automatically opened every time via the global option `blogdown.initial_files` in your `.Rprofile`. This option can take a vector of file paths, e.g., `options(blogdown.initial_files = c('config.yaml', '.Rprofile', 'content/post/my-first-post/index.Rmd'))` (files that do not exist will be ignored). Alternatively, this option can take a function that returns a vector of file paths, e.g., `options(blogdown.initial_files = blogdown:::initial_files)`.
 
@@ -504,7 +504,7 @@
 
 ## NEW FEATURES
 
-- Added a global option `blogdown.hugo.args`, which should be a character vector with additional flags to be passed to the `hugo` system command via `hugo_build()`. For example, `options(blogdown.hugo.args = '--minify')` will use [minification](https://gohugo.io/news/0.47-relnotes/) on the final rendered output. More available flags in the [hugo documentation](https://gohugo.io/commands/hugo#options) (thanks, @jozefhajnala, #382).
+- Added a global option `blogdown.hugo.args`, which should be a character vector with additional flags to be passed to the `hugo` system command via `hugo_build()`. For example, `options(blogdown.hugo.args = '--minify')` will use [minification](https://github.com/gohugoio/hugo/releases/tag/v0.47) on the final rendered output. More available flags in the [hugo documentation](https://gohugo.io/commands/hugo/#options) (thanks, @jozefhajnala, #382).
 
 # CHANGES IN blogdown VERSION 0.12
 
@@ -636,4 +636,4 @@
 
 # CHANGES IN blogdown VERSION 0.1
 
-- The first CRAN release. For full documentation, please see the blogdown book: https://bookdown.org/yihui/blogdown.
+- The first CRAN release. For full documentation, please see the blogdown book: https://pkg.yihui.org/blogdown.

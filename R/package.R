@@ -2,7 +2,7 @@
 #'
 #' The comprehensive documentation of this package is the book \bold{blogdown:
 #' Creating Websites with R Markdown}
-#' (\url{https://bookdown.org/yihui/blogdown/}). You are expected to read at
+#' (\url{https://pkg.yihui.org/blogdown/}). You are expected to read at
 #' least the first chapter. If you are really busy or do not care about an
 #' introduction to \pkg{blogdown} (e.g., you are very familiar with creating
 #' websites), set your working directory to an empty directory, and run

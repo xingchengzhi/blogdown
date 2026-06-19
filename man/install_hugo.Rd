@@ -68,7 +68,7 @@ If you want to install Hugo to a custom path, you can set the global option
 you call \code{install_hugo()}, e.g., \code{options(blogdown.hugo.dir =
 '~/Downloads/Hugo')}. This may be useful for you to use a specific version of
 Hugo for a specific website. You can set this option per project. See
-\href{https://bookdown.org/yihui/blogdown/global-options.html}{Section 1.4
+\href{https://pkg.yihui.org/blogdown/global-options.html}{Section 1.4
 Global options} for details, or store a copy of Hugo on a USB Flash drive
 along with your website.
 }

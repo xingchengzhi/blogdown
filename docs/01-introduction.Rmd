@@ -527,7 +527,7 @@ And here is an example of an R code block in plain Markdown:
 ```
 ````
 
-A plain Markdown post is directly rendered to HTML through [Goldmark](https://github.com/yuin/goldmark) \index{Goldmark}(a Markdown renderer written in the Go language and adopted by Hugo). An R Markdown post is first compiled to Markdown through the R packages **rmarkdown** and **bookdown**, which means you can use most features of [**bookdown**'s Markdown extensions](https://bookdown.org/yihui/bookdown/components.html) in **blogdown**. Then the Markdown post can be rendered to HTML by either Goldmark or Pandoc\index{Pandoc}. For the latter case, you can also use richer features in [Pandoc's Markdown](http://pandoc.org/MANUAL.html#pandocs-markdown) (see Section \@ref(blogdown-method) for more information).
+A plain Markdown post is directly rendered to HTML through [Goldmark](https://github.com/yuin/goldmark) \index{Goldmark}(a Markdown renderer written in the Go language and adopted by Hugo). An R Markdown post is first compiled to Markdown through the R packages **rmarkdown** and **bookdown**, which means you can use most features of [**bookdown**'s Markdown extensions](https://pkg.yihui.org/bookdown/components.html) in **blogdown**. Then the Markdown post can be rendered to HTML by either Goldmark or Pandoc\index{Pandoc}. For the latter case, you can also use richer features in [Pandoc's Markdown](http://pandoc.org/MANUAL.html#pandocs-markdown) (see Section \@ref(blogdown-method) for more information).
 
 ### Basic features of R Markdown
 
